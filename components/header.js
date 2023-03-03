@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DarkModeToggleButton from "./dark-mode-toggle-button";
 
 export default function Header({ children }) {
   return (
@@ -40,6 +41,7 @@ export default function Header({ children }) {
             </Link>
           </nav>
           {/* Button : 다크모드 토글 버튼 작업해야 함 */}
+          <DarkModeToggleButton />
         </div>
       </header>
     </>
