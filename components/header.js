@@ -4,11 +4,12 @@ import DarkModeToggleButton from "./dark-mode-toggle-button";
 export default function Header({ children }) {
   return (
     <>
-      <header className="text-gray-600 body-font">
+      <header className="body-font">
+        {/* div className : text-gray-900 dark:text-slate-100 삭제(globals.css 통합) */}
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link
             href="/"
-            className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+            className="flex title-font font-medium Link-hover items-center mb-4 md:mb-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,20 +27,23 @@ export default function Header({ children }) {
           </Link>
 
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <Link href="/" className="mr-5 hover:text-gray-900">
+            <Link href="/" className="mr-5 Link-hover">
               Home(홈)
             </Link>
-            <a className="mr-5 hover:text-gray-900">Profile(프로필)</a>
-            <Link href="/projects" className="mr-5 hover:text-gray-900">
+            <Link href="/" className="mr-5 Link-hover">
+              Profile(프로필)
+            </Link>
+            <Link href="/projects" className="mr-5 Link-hover">
               Project(프로젝트)
             </Link>
             <Link
               href="https://open.kakao.com/o/sSZEjx7e"
-              className="mr-5 hover:text-gray-900"
+              className="mr-5 Link-hover"
             >
               Contact(연락처)
             </Link>
           </nav>
+
           {/* Button : 다크모드 토글 버튼 작업해야 함 */}
           <DarkModeToggleButton />
         </div>

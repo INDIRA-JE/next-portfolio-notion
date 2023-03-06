@@ -7,7 +7,7 @@ import In from "./drawing/in";
 export default function Footer({ children }) {
   return (
     <>
-      <footer className="text-gray-600 body-font">
+      <footer className="body-font">
         {/* Container 삭제 부분
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
@@ -91,11 +91,11 @@ export default function Footer({ children }) {
             </div>
           </div>
         </div> */}
-        <div className="bg-gray-100">
+        <div className="">
           <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
             <Link
               href="/"
-              className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+              className="flex title-font font-medium Link-hover items-center md:justify-start justify-center"
             >
               {/* 하단 이미지 삭제
               <svg
@@ -112,19 +112,20 @@ export default function Footer({ children }) {
               </svg> */}
               <span className="ml-3 text-xl">JE Portfolio</span>
             </Link>
-            <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-              © 2020 Tailblocks —
+            {/* SNS 계정 */}
+            <p className="text-sm sm:ml-6 sm:mt-0 mt-4">
+              © 2023 Portfolio →
               <a
-                href="https://twitter.com/knyttneve"
+                href="https://acute-cap-e20.notion.site/PortFolio-1a2e920049c2473e88c08149d1214b49"
                 rel="noopener noreferrer"
-                className="text-gray-600 ml-1"
+                className="ml-1"
                 target="_blank"
               >
-                @knyttneve
+                @Notion
               </a>
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-              <a className="text-gray-500">
+              <a>
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"
@@ -138,7 +139,7 @@ export default function Footer({ children }) {
                   <FaceBook />
                 </svg>
               </a>
-              <a className="ml-3 text-gray-500">
+              <a className="ml-3">
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"
@@ -152,7 +153,7 @@ export default function Footer({ children }) {
                   <Twitter />
                 </svg>
               </a>
-              <a className="ml-3 text-gray-500">
+              <a className="ml-3">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -168,7 +169,7 @@ export default function Footer({ children }) {
                   <Instagram />
                 </svg>
               </a>
-              <a className="ml-3 text-gray-500">
+              <a className="ml-3">
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
