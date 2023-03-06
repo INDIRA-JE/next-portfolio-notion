@@ -28,10 +28,8 @@ h6 {
   @apply text-slate-900 dark:text-white;
 }
 a {
-  @apply text-gray-600
-  hover:text-slate-700
-  dark:text-white
-  dark:hover:text-slate-700;
+  @apply text-gray-600 hover:text-slate-700
+  dark:text-white dark:hover:text-slate-700;
 }
 p {
   @apply text-gray-600 dark:text-slate-400;
