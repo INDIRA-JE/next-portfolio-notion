@@ -30,7 +30,7 @@ export default function Header({ children }) {
             <Link href="/" className="mr-5 Link-hover">
               Home(홈)
             </Link>
-            <Link href="/" className="mr-5 Link-hover">
+            <Link href="/profile" className="mr-5 Link-hover">
               Profile(프로필)
             </Link>
             <Link href="/projects" className="mr-5 Link-hover">
