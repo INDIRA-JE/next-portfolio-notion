@@ -1,0 +1,23 @@
+2023.03.16
+    ▶ 이슈 : projects.results.다음 들어갈 length, map 정의가 안되어있다고 함
+    
+        // Client 쪽에서 보여지는 부분
+        export default function Projects(projects) {
+        console.log(projects);
+        return (
+            <>
+            <Layout>
+                <Head>
+                <title>Portfolio</title>
+                <meta name="description" content="매일 같이 빡코딩" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <h1>총 프로젝트 : {projects.results.length}</h1>
+                {projects.results.map((aProject) => (
+                    <h1>{aProject.properties.Name.title[0].plain_text}</h1>
+                ))}
+            </Layout>
+            </>
+        );
+        }
