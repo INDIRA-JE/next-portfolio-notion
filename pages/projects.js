@@ -2,10 +2,10 @@
 import Layout from "@/components/layout";
 import Head from "next/head";
 import { TOKEN, DATABASE_ID } from "@/config";
+import ProjectItem from "@/components/projects/project-item";
 
 // Client(Browser) 쪽에서 보여지는 부분
 export default function Projects({ projects }) {
-  console.log("▶ 4. 화면 출력 : ", projects);
   return (
     <Layout>
       <Head>
@@ -17,9 +17,7 @@ export default function Projects({ projects }) {
       <h1>총 프로젝트 : {projects.results.length}</h1>
       {/* React에서 로직 처리를 할 경우 : {}중괄호 입력 */}
       {projects.results.map((aProject) => (
-        <h1 key={aProject.id}>
-          {aProject.properties.Name.title[0].plain_text}
-        </h1>
+        <ProjectItem key={aProject.id} data={aProject} />
       ))}
     </Layout>
   );
@@ -55,8 +53,6 @@ export async function getStaticProps() {
   const projectsNames = projects.results.map(
     (aProject) => aProject.properties.Name.title[0].plain_text
   );
-
-  console.log(`▶ 3. Map projectsNames : ${projectsNames}`);
 
   return {
     // return : 바깥으로 Data 넘겨주고 싶을 때 -> props에 입력 -> function Projects로 빠진다
