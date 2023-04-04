@@ -7,7 +7,7 @@ export default function ProjectItem({ data }) {
   const imgScr = data.cover.file?.url || data.cover.external.url;
 
   return (
-    <div className="flex flex-col m-3 bg-slate-700 rounded-xl">
+    <div className="flex flex-col m-3 bg-slate-700 rounded-xl w-full">
       <Image
         className="rouded-t-xl"
         src={imgScr}
@@ -15,11 +15,14 @@ export default function ProjectItem({ data }) {
         width="100%"
         height="50%"
         layout="responsive"
-        objectFit="none"
+        objectFit="cover"
+        quality={100}
       />
-      <h1>{Title}</h1>
-      <h3>{description}</h3>
-      <a href={github}>Github 링크 바로가기</a>
+      <div className="p-4 flex flex-col w-full">
+        <h1>{Title}</h1>
+        <h3>{description}</h3>
+        <a href={github}>Github 링크 바로가기</a>
+      </div>
     </div>
   );
 }
