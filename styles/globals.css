@@ -6,12 +6,23 @@
   @apply bg-white dark:bg-slate-900;
 }
 .btn-project {
-  @apply inline-flex 
-  text-white dark:text-white 
-  bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-400 rounded text-lg;
+  @apply inline-flex text-white dark:text-white 
+          bg-indigo-500 border-0 py-2 px-6 
+          focus:outline-none 
+          hover:bg-indigo-400 rounded text-lg;
 }
 .Link-hover {
   @apply hover:text-gray-900 dark:hover:text-slate-400;
+}
+.project-card {
+  @apply flex flex-col m-3 rounded-xl w-full
+          transition duration-300 transform border border-gray-300
+          hover:scale-105
+          hover:shadow-lg
+          dark:border-gray-200/50
+          dark:hover:shadow-gray-400/40
+
+          hover:text-blue-600;
 }
 header {
   @apply bg-gray-100 dark:bg-gray-600/20 text-gray-600 dark:text-white;
