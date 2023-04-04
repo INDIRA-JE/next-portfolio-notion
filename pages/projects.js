@@ -8,7 +8,7 @@ import ProjectItem from "@/components/projects/project-item";
 export default function Projects({ projects }) {
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen mb-10 px-6 ">
+      <div className="flex flex-col items-center justify-center min-h-screen mb-10 px-10 ">
         <Head>
           <title>Portfolio</title>
           <meta name="description" content="첫번째 포트폴리오" />
